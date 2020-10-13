@@ -10,6 +10,16 @@ type Direction
     | Column
 
 
+row : Direction
+row =
+    Row
+
+
+column : Direction
+column =
+    Column
+
+
 type Alignment
     = Start
     | Center
@@ -20,9 +30,45 @@ type Alignment
     | Stretch
 
 
+start : Alignment
+start =
+    Start
+
+
+center : Alignment
+center =
+    Center
+
+
+end : Alignment
+end =
+    End
+
+
+spaceBetween : Alignment
+spaceBetween =
+    SpaceBetween
+
+
+spaceAround : Alignment
+spaceAround =
+    SpaceAround
+
+
+spaceEvenly : Alignment
+spaceEvenly =
+    SpaceEvenly
+
+
+stretch : Alignment
+stretch =
+    Stretch
+
+
 fxLayout : Direction -> Alignment -> Alignment -> List (Attribute msg)
 fxLayout direction alignHorizontal alignVertical =
     let
+        flexDirection : String
         flexDirection =
             if direction == Row then
                 "row"
@@ -75,6 +121,7 @@ fxLayout direction alignHorizontal alignVertical =
                     _ ->
                         "stretch"
 
+        aVertical : String
         aVertical =
             -- Row
             if direction == Row then
@@ -119,16 +166,26 @@ fxLayout direction alignHorizontal alignVertical =
                     SpaceEvenly ->
                         "space-evenly"
 
-        styles1 =
-            style "flex-direction" flexDirection :: []
+        defaultStyles : List (Attribute msg)
+        defaultStyles =
+            [ style "flex-direction" flexDirection
+            , style "display" "flex"
+            , style "box-sizing" "border-box"
+            ]
 
-        styles2 =
-            style "display" "flex" :: styles1
+        computedStyles : List (Attribute msg)
+        computedStyles =
+            -- row
+            -- if direction == Row then
+            [ style "place-content" (aVertical ++ " " ++ aHorizontal)
+            , style "align-items" aVertical
+            ]
 
-        styles3 =
-            style "box-sizing" "border-box" :: styles2
-
+        -- else
+        --     [ style "place-content" (aHorizontal ++ " " ++ aVertical)
+        --     , style "align-items" aHorizontal
+        --     ]
         styles =
-            styles1 ++ styles2 ++ styles3
+            defaultStyles ++ computedStyles
     in
     styles
