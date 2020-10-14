@@ -1,0 +1,16 @@
+{
+  "name": "flex-layout",
+  "version": "0.0.1",
+  "description": "Elm package for working with Flex layouts",
+  "main": "index.js",
+  "scripts": {
+    "watch": "chokidar 'src/Examples/**/*.elm' -c 'elm make src/Examples/StaticExample.elm --output=src/Examples/build/staticExample.js' --initial"
+  },
+  "dependencies": {
+    "chokidar-cli": "^2.1.0"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "Tshepo Mgaga",
+  "license": "MIT"
+}

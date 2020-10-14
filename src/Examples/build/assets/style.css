@@ -1,0 +1,21 @@
+body {
+  background: #eee;
+}
+
+.page-title h5 {
+  margin-top: unset;
+  margin-bottom: unset;
+}
+
+.box-container {
+  height: 402px;
+  border: 1px solid gray;
+}
+
+.box-item {
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  box-shadow: 0 2px 5px 0 rgba(52, 47, 51, 0.63);
+}

@@ -4404,8 +4404,22 @@ var $elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 			return 3;
 	}
 };
+var $elm$html$Html$br = _VirtualDom_node('br');
+var $elm$json$Json$Encode$string = _Json_wrap;
+var $elm$html$Html$Attributes$stringProperty = F2(
+	function (key, string) {
+		return A2(
+			_VirtualDom_property,
+			key,
+			$elm$json$Json$Encode$string(string));
+	});
+var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$html$Html$h5 = _VirtualDom_node('h5');
 var $author$project$Flex$Row = {$: 'Row'};
 var $author$project$Flex$row = $author$project$Flex$Row;
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
 var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
 var $author$project$Examples$StaticExample$blockStyles = F6(
@@ -4416,19 +4430,12 @@ var $author$project$Examples$StaticExample$blockStyles = F6(
 			[
 				A2($elm$html$Html$Attributes$style, 'min-width', minWidth),
 				A2($elm$html$Html$Attributes$style, 'min-height', minHeight),
-				A2($elm$html$Html$Attributes$style, 'border-radius', '3px'),
-				A2($elm$html$Html$Attributes$style, 'color', '#fff'),
-				A2($elm$html$Html$Attributes$style, 'text-align', 'center'),
-				A2($elm$html$Html$Attributes$style, 'padding', '8px'),
-				A2($elm$html$Html$Attributes$style, 'box-shadow', '0 2px 5px 0 rgba(52,47,51,.63)'),
-				A2($elm$html$Html$Attributes$style, 'font-size', '14px'),
-				A2($elm$html$Html$Attributes$style, 'font-family', 'Roboto, Helvetica Neue, sans-serif'),
-				A2($elm$html$Html$Attributes$style, 'background-color', backgroundColor)
+				A2($elm$html$Html$Attributes$style, 'background-color', backgroundColor),
+				$elm$html$Html$Attributes$class('box-item')
 			]);
 	});
 var $author$project$Flex$Center = {$: 'Center'};
 var $author$project$Flex$center = $author$project$Flex$Center;
-var $elm$html$Html$div = _VirtualDom_node('div');
 var $author$project$Flex$fxLayout = F3(
 	function (direction, alignHorizontal, alignVertical) {
 		var flexDirection = _Utils_eq(direction, $author$project$Flex$Row) ? 'row' : 'column';
@@ -4518,18 +4525,13 @@ var $author$project$Flex$fxLayout = F3(
 	});
 var $author$project$Flex$SpaceAround = {$: 'SpaceAround'};
 var $author$project$Flex$spaceAround = $author$project$Flex$SpaceAround;
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $author$project$Examples$StaticExample$main = function () {
-	var direction = $author$project$Flex$row;
+var $author$project$Examples$StaticExample$viewBoxContainer = function (direction) {
 	return A2(
 		$elm$html$Html$div,
 		_Utils_ap(
 			_List_fromArray(
 				[
-					A2($elm$html$Html$Attributes$style, 'height', '402px'),
-					A2($elm$html$Html$Attributes$style, 'border', '1px solid gray'),
-					A2($elm$html$Html$Attributes$style, 'margin', '50px')
+					$elm$html$Html$Attributes$class('box-container')
 				]),
 			A3($author$project$Flex$fxLayout, direction, $author$project$Flex$spaceAround, $author$project$Flex$center)),
 		_List_fromArray(
@@ -4578,6 +4580,130 @@ var $author$project$Examples$StaticExample$main = function () {
 				_List_fromArray(
 					[
 						$elm$html$Html$text('5')
+					]))
+			]));
+};
+var $elm$html$Html$a = _VirtualDom_node('a');
+var $author$project$Flex$Column = {$: 'Column'};
+var $author$project$Flex$column = $author$project$Flex$Column;
+var $elm$html$Html$Attributes$href = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'href',
+		_VirtualDom_noJavaScriptUri(url));
+};
+var $elm$html$Html$span = _VirtualDom_node('span');
+var $author$project$Flex$Start = {$: 'Start'};
+var $author$project$Flex$start = $author$project$Flex$Start;
+var $author$project$Flex$Stretch = {$: 'Stretch'};
+var $author$project$Flex$stretch = $author$project$Flex$Stretch;
+var $author$project$Examples$StaticExample$viewPageTitleContainer = A2(
+	$elm$html$Html$div,
+	_Utils_ap(
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('page-title')
+			]),
+		A3($author$project$Flex$fxLayout, $author$project$Flex$column, $author$project$Flex$stretch, $author$project$Flex$start)),
+	_List_fromArray(
+		[
+			A2(
+			$elm$html$Html$div,
+			_Utils_ap(
+				_List_fromArray(
+					[
+						A2($elm$html$Html$Attributes$style, 'height', '50px')
+					]),
+				A3($author$project$Flex$fxLayout, $author$project$Flex$row, $author$project$Flex$start, $author$project$Flex$center)),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$h5,
+					_List_fromArray(
+						[
+							A2($elm$html$Html$Attributes$style, 'margin-right', '20px')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('Elm Flex Layout Demos:')
+						])),
+					A2(
+					$elm$html$Html$span,
+					_List_Nil,
+					_List_fromArray(
+						[
+							$elm$html$Html$text('Version: 0.0.1')
+						]))
+				])),
+			A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					A2($elm$html$Html$Attributes$style, 'height', '50px')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$span,
+					_List_Nil,
+					_List_fromArray(
+						[
+							$elm$html$Html$text('This Elm package is inspired by the '),
+							A2(
+							$elm$html$Html$a,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$href('https://tburleson-layouts-demos.firebaseapp.com')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Angular Flex Layout library')
+								])),
+							$elm$html$Html$text('. My goal is to port as many features as I can from that library to Elm.')
+						]))
+				]))
+		]));
+var $author$project$Examples$StaticExample$main = function () {
+	var direction = $author$project$Flex$row;
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('container')
+			]),
+		_List_fromArray(
+			[
+				A2($elm$html$Html$br, _List_Nil, _List_Nil),
+				$author$project$Examples$StaticExample$viewPageTitleContainer,
+				A2($elm$html$Html$br, _List_Nil, _List_Nil),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('card')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$div,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('card-body')
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$h5,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('card-title')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Layout Children with \'fxLayout\'')
+									])),
+								$author$project$Examples$StaticExample$viewBoxContainer(direction)
+							]))
 					]))
 			]));
 }();

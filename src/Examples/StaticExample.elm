@@ -24,29 +24,15 @@ blockStyles direction backgroundColor rowMinWidth rowMinHeight colMinWidth colMi
     in
     [ style "min-width" minWidth
     , style "min-height" minHeight
-    , style "border-radius" "3px"
-    , style "color" "#fff"
-    , style "text-align" "center"
-    , style "padding" "8px"
-    , style "box-shadow" "0 2px 5px 0 rgba(52,47,51,.63)"
-    , style "font-size" "14px"
-    , style "font-family" "Roboto, Helvetica Neue, sans-serif"
     , style "background-color" backgroundColor
+    , class "box-item"
     ]
 
 
-main : Html msg
-main =
-    let
-        direction : Direction
-        direction =
-            Flex.row
-    in
+viewBoxContainer : Direction -> Html msg
+viewBoxContainer direction =
     div
-        ([ style "height" "402px"
-         , style "border" "1px solid gray"
-         , style "margin" "50px"
-         ]
+        ([ class "box-container" ]
             ++ fxLayout direction Flex.spaceAround Flex.center
         )
         [ div
@@ -68,4 +54,41 @@ main =
         , div
             ([] ++ blockStyles direction "#5ca6b0" "75px" "50px" "75px" "50px")
             [ text "5" ]
+        ]
+
+
+viewPageTitleContainer : Html msg
+viewPageTitleContainer =
+    div ([ class "page-title" ] ++ fxLayout Flex.column Flex.stretch Flex.start)
+        [ div ([ style "height" "50px" ] ++ fxLayout Flex.row Flex.start Flex.center)
+            [ h5 [ style "margin-right" "20px" ] [ text "Elm Flex Layout Demos:" ]
+            , span [] [ text "Version: 0.0.1" ]
+            ]
+        , div [ style "height" "50px" ]
+            [ span []
+                [ text "This Elm package is inspired by the "
+                , a [ href "https://tburleson-layouts-demos.firebaseapp.com" ] [ text "Angular Flex Layout library" ]
+                , text ". My goal is to port as many features as I can from that library to Elm."
+                ]
+            ]
+        ]
+
+
+main : Html msg
+main =
+    let
+        direction : Direction
+        direction =
+            Flex.row
+    in
+    div [ class "container" ]
+        [ br [] []
+        , viewPageTitleContainer
+        , br [] []
+        , div [ class "card" ]
+            [ div [ class "card-body" ]
+                [ h5 [ class "card-title" ] [ text "Layout Children with 'fxLayout'" ]
+                , viewBoxContainer direction
+                ]
+            ]
         ]
