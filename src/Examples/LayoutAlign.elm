@@ -5,10 +5,25 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 
 
-blockStyles : String -> String -> String -> List (Attribute msg)
-blockStyles backgroundColor minWidth minHeight =
-    [ style "min-height" minHeight
-    , style "min-width" minWidth
+blockStyles : Direction -> String -> String -> String -> String -> String -> List (Attribute msg)
+blockStyles direction backgroundColor rowMinWidth rowMinHeight colMinWidth colMinHeight =
+    let
+        minWidth =
+            if direction == Flex.row then
+                rowMinWidth
+
+            else
+                colMinWidth
+
+        minHeight =
+            if direction == Flex.row then
+                rowMinHeight
+
+            else
+                colMinHeight
+    in
+    [ style "min-width" minWidth
+    , style "min-height" minHeight
     , style "border-radius" "3px"
     , style "color" "#fff"
     , style "text-align" "center"
@@ -35,47 +50,22 @@ main =
             ++ fxLayout direction Flex.spaceAround Flex.stretch
         )
         [ div
-            ([] ++ blockStyles "#009688" "75px" "50px")
+            ([] ++ blockStyles direction "#009688" "75px" "50px" "75px" "50px")
             [ text "1" ]
         , div
             ([]
-                ++ blockStyles
-                    "#3949ab"
-                    (if direction == Flex.row then
-                        "75px"
-
-                     else
-                        "125px"
-                    )
-                    (if direction == Flex.row then
-                        "100px"
-
-                     else
-                        "50px"
-                    )
+                ++ blockStyles direction "#3949ab" "75px" "100px" "125px" "50px"
             )
             [ text "2" ]
         , div
-            ([] ++ blockStyles "#9c27b0" "75px" "50px")
+            ([] ++ blockStyles direction "#9c27b0" "75px" "50px" "75px" "50px")
             [ text "3" ]
         , div
             ([]
-                ++ blockStyles "#b08752"
-                    (if direction == Flex.row then
-                        "75px"
-
-                     else
-                        "100px"
-                    )
-                    (if direction == Flex.row then
-                        "75px"
-
-                     else
-                        "50px"
-                    )
+                ++ blockStyles direction "#b08752" "75px" "75px" "100px" "50px"
             )
             [ text "4" ]
         , div
-            ([] ++ blockStyles "#5ca6b0" "75px" "50px")
+            ([] ++ blockStyles direction "#5ca6b0" "75px" "50px" "75px" "50px")
             [ text "5" ]
         ]
