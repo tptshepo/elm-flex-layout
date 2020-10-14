@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <style>
+    .jumbotron {
+      background-color: #e6ffe6;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+  <script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  
+  <script src="build/staticExample.js"></script>
+  <script>
+    var app = Elm.Examples.StaticExample.init({
+      node: document.getElementById("root")
+    });      
+  </script>
+
+</body>
+
+</html>

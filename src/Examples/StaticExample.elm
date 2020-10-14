@@ -1,4 +1,4 @@
-module Examples.LayoutAlign exposing (..)
+module Examples.StaticExample exposing (..)
 
 import Flex exposing (..)
 import Html exposing (..)
@@ -40,14 +40,14 @@ main =
     let
         direction : Direction
         direction =
-            Flex.column
+            Flex.row
     in
     div
         ([ style "height" "402px"
          , style "border" "1px solid gray"
          , style "margin" "50px"
          ]
-            ++ fxLayout direction Flex.spaceAround Flex.stretch
+            ++ fxLayout direction Flex.spaceAround Flex.center
         )
         [ div
             ([] ++ blockStyles direction "#009688" "75px" "50px" "75px" "50px")
