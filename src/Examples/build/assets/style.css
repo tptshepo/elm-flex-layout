@@ -12,6 +12,19 @@ body {
   border: 1px solid gray;
 }
 
+.toggle-container {
+  margin-top: 50px;
+  height: 202px;
+  /* border: 1px solid gray; */
+}
+
+.toggle-item-container {
+  margin-top: 5px;
+  /* height: 100px; */
+  width: 200px;
+  /* border: 1px solid red; */
+}
+
 .box-item {
   border-radius: 3px;
   color: #fff;
