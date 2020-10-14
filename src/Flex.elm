@@ -176,15 +176,16 @@ fxLayout direction alignHorizontal alignVertical =
         computedStyles : List (Attribute msg)
         computedStyles =
             -- row
-            -- if direction == Row then
-            [ style "place-content" (aVertical ++ " " ++ aHorizontal)
-            , style "align-items" aVertical
-            ]
+            if direction == Row then
+                [ style "place-content" (aVertical ++ " " ++ aHorizontal)
+                , style "align-items" aVertical
+                ]
 
-        -- else
-        --     [ style "place-content" (aHorizontal ++ " " ++ aVertical)
-        --     , style "align-items" aHorizontal
-        --     ]
+            else
+                [ style "place-content" (aHorizontal ++ " " ++ aVertical)
+                , style "align-items" aHorizontal
+                ]
+
         styles =
             defaultStyles ++ computedStyles
     in
