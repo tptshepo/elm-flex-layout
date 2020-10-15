@@ -16,7 +16,7 @@ $ elm install tptshepo/elm-flex-layout
 
 #### fxLayout
 
-![image](src/Examples/build/assets/images/row_spacearound_center.png)
+![image](docs/assets/images/row_spacearound_center.png)
 
 ```elm
 import Flex
