@@ -1,7 +1,30 @@
-module Flex exposing (..)
+module Flex exposing
+    ( Direction, row, column
+    , start, end, center, stretch, spaceBetween, spaceAround, spaceEvenly
+    , fxLayout
+    )
 
-import Html exposing (..)
-import Html.Attributes exposing (..)
+{-| Elm Flex Layout provides a layout API for using Flexbox CSS. This module provides Elm developers with layout features using a custom Layout API.
+
+
+# Direction
+
+@docs Direction, row, column
+
+
+# Alignment
+
+@docs start, end, center, stretch, spaceBetween, spaceAround, spaceEvenly
+
+
+# API functions
+
+@docs fxLayout
+
+-}
+
+import Html exposing (Attribute)
+import Html.Attributes exposing (style)
 
 
 {-| This establishes the main-axis, thus defining the direction flex items are placed in the flex container.
