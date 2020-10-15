@@ -14,7 +14,13 @@ $ elm install tptshepo/elm-flex-layout
 
 ### Usage
 
-#### fxLayout
+#### Demo
+
+https://tptshepo.github.io/elm-flex-layout
+
+#### API
+
+##### fxLayout
 
 ![image](docs/assets/images/row_spacearound_center.png)
 

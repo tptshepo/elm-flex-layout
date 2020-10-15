@@ -6,6 +6,9 @@ module Flex exposing
 
 {-| Flex provides a layout API for using Flexbox CSS.
 
+Demo
+<https://tptshepo.github.io/elm-flex-layout>
+
 
 # API
 
