@@ -10536,20 +10536,20 @@ var $elm$core$Basics$never = function (_v0) {
 	}
 };
 var $elm$browser$Browser$element = _Browser_element;
-var $author$project$Flex$Center = {$: 'Center'};
-var $author$project$Flex$center = $author$project$Flex$Center;
-var $author$project$Flex$Row = {$: 'Row'};
-var $author$project$Flex$row = $author$project$Flex$Row;
-var $author$project$Flex$SpaceAround = {$: 'SpaceAround'};
-var $author$project$Flex$spaceAround = $author$project$Flex$SpaceAround;
-var $author$project$Examples$StaticExample$init = function (_v0) {
+var $tptshepo$elm_flex_layout$Flex$Center = {$: 'Center'};
+var $tptshepo$elm_flex_layout$Flex$center = $tptshepo$elm_flex_layout$Flex$Center;
+var $tptshepo$elm_flex_layout$Flex$Row = {$: 'Row'};
+var $tptshepo$elm_flex_layout$Flex$row = $tptshepo$elm_flex_layout$Flex$Row;
+var $tptshepo$elm_flex_layout$Flex$SpaceAround = {$: 'SpaceAround'};
+var $tptshepo$elm_flex_layout$Flex$spaceAround = $tptshepo$elm_flex_layout$Flex$SpaceAround;
+var $tptshepo$elm_flex_layout$Examples$StaticExample$init = function (_v0) {
 	return _Utils_Tuple2(
-		{direction: $author$project$Flex$row, horizontalAlignment: $author$project$Flex$spaceAround, verticalAlignment: $author$project$Flex$center},
+		{direction: $tptshepo$elm_flex_layout$Flex$row, horizontalAlignment: $tptshepo$elm_flex_layout$Flex$spaceAround, verticalAlignment: $tptshepo$elm_flex_layout$Flex$center},
 		$elm$core$Platform$Cmd$none);
 };
 var $elm$core$Platform$Sub$batch = _Platform_batch;
 var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
-var $author$project$Examples$StaticExample$update = F2(
+var $tptshepo$elm_flex_layout$Examples$StaticExample$update = F2(
 	function (msg, model) {
 		switch (msg.$) {
 			case 'LayoutDirection':
@@ -10579,11 +10579,11 @@ var $author$project$Examples$StaticExample$update = F2(
 		}
 	});
 var $elm$html$Html$br = _VirtualDom_node('br');
-var $author$project$Flex$Column = {$: 'Column'};
-var $author$project$Flex$column = $author$project$Flex$Column;
-var $author$project$Flex$fxLayout = F3(
+var $tptshepo$elm_flex_layout$Flex$Column = {$: 'Column'};
+var $tptshepo$elm_flex_layout$Flex$column = $tptshepo$elm_flex_layout$Flex$Column;
+var $tptshepo$elm_flex_layout$Flex$fxLayout = F3(
 	function (direction, alignHorizontal, alignVertical) {
-		var flexDirection = _Utils_eq(direction, $author$project$Flex$Row) ? 'row' : 'column';
+		var flexDirection = _Utils_eq(direction, $tptshepo$elm_flex_layout$Flex$Row) ? 'row' : 'column';
 		var defaultStyles = _List_fromArray(
 			[
 				A2($elm$html$Html$Attributes$style, 'flex-direction', flexDirection),
@@ -10591,7 +10591,7 @@ var $author$project$Flex$fxLayout = F3(
 				A2($elm$html$Html$Attributes$style, 'box-sizing', 'border-box')
 			]);
 		var aVertical = function () {
-			if (_Utils_eq(direction, $author$project$Flex$Row)) {
+			if (_Utils_eq(direction, $tptshepo$elm_flex_layout$Flex$Row)) {
 				switch (alignVertical.$) {
 					case 'Start':
 						return 'flex-start';
@@ -10624,7 +10624,7 @@ var $author$project$Flex$fxLayout = F3(
 			}
 		}();
 		var aHorizontal = function () {
-			if (_Utils_eq(direction, $author$project$Flex$Row)) {
+			if (_Utils_eq(direction, $tptshepo$elm_flex_layout$Flex$Row)) {
 				switch (alignHorizontal.$) {
 					case 'Start':
 						return 'flex-start';
@@ -10656,7 +10656,7 @@ var $author$project$Flex$fxLayout = F3(
 				}
 			}
 		}();
-		var computedStyles = _Utils_eq(direction, $author$project$Flex$Row) ? _List_fromArray(
+		var computedStyles = _Utils_eq(direction, $tptshepo$elm_flex_layout$Flex$Row) ? _List_fromArray(
 			[
 				A2($elm$html$Html$Attributes$style, 'place-content', aVertical + (' ' + aHorizontal)),
 				A2($elm$html$Html$Attributes$style, 'align-items', aVertical)
@@ -10669,14 +10669,14 @@ var $author$project$Flex$fxLayout = F3(
 		return styles;
 	});
 var $elm$html$Html$h5 = _VirtualDom_node('h5');
-var $author$project$Flex$Start = {$: 'Start'};
-var $author$project$Flex$start = $author$project$Flex$Start;
-var $author$project$Flex$Stretch = {$: 'Stretch'};
-var $author$project$Flex$stretch = $author$project$Flex$Stretch;
-var $author$project$Examples$StaticExample$blockStyles = F6(
+var $tptshepo$elm_flex_layout$Flex$Start = {$: 'Start'};
+var $tptshepo$elm_flex_layout$Flex$start = $tptshepo$elm_flex_layout$Flex$Start;
+var $tptshepo$elm_flex_layout$Flex$Stretch = {$: 'Stretch'};
+var $tptshepo$elm_flex_layout$Flex$stretch = $tptshepo$elm_flex_layout$Flex$Stretch;
+var $tptshepo$elm_flex_layout$Examples$StaticExample$blockStyles = F6(
 	function (direction, backgroundColor, rowMinWidth, rowMinHeight, colMinWidth, colMinHeight) {
-		var minWidth = _Utils_eq(direction, $author$project$Flex$row) ? rowMinWidth : colMinWidth;
-		var minHeight = _Utils_eq(direction, $author$project$Flex$row) ? rowMinHeight : colMinHeight;
+		var minWidth = _Utils_eq(direction, $tptshepo$elm_flex_layout$Flex$row) ? rowMinWidth : colMinWidth;
+		var minHeight = _Utils_eq(direction, $tptshepo$elm_flex_layout$Flex$row) ? rowMinHeight : colMinHeight;
 		return _List_fromArray(
 			[
 				A2($elm$html$Html$Attributes$style, 'min-width', minWidth),
@@ -10685,9 +10685,9 @@ var $author$project$Examples$StaticExample$blockStyles = F6(
 				$elm$html$Html$Attributes$class('box-item')
 			]);
 	});
-var $author$project$Examples$StaticExample$viewBoxContainer = function (model) {
-	var vAlign = _Utils_eq(model.direction, $author$project$Flex$row) ? model.verticalAlignment : model.horizontalAlignment;
-	var hAlign = _Utils_eq(model.direction, $author$project$Flex$row) ? model.horizontalAlignment : model.verticalAlignment;
+var $tptshepo$elm_flex_layout$Examples$StaticExample$viewBoxContainer = function (model) {
+	var vAlign = _Utils_eq(model.direction, $tptshepo$elm_flex_layout$Flex$row) ? model.verticalAlignment : model.horizontalAlignment;
+	var hAlign = _Utils_eq(model.direction, $tptshepo$elm_flex_layout$Flex$row) ? model.horizontalAlignment : model.verticalAlignment;
 	return A2(
 		$elm$html$Html$div,
 		_Utils_ap(
@@ -10695,14 +10695,14 @@ var $author$project$Examples$StaticExample$viewBoxContainer = function (model) {
 				[
 					$elm$html$Html$Attributes$class('box-container')
 				]),
-			A3($author$project$Flex$fxLayout, model.direction, hAlign, vAlign)),
+			A3($tptshepo$elm_flex_layout$Flex$fxLayout, model.direction, hAlign, vAlign)),
 		_List_fromArray(
 			[
 				A2(
 				$elm$html$Html$div,
 				_Utils_ap(
 					_List_Nil,
-					A6($author$project$Examples$StaticExample$blockStyles, model.direction, '#009688', '75px', '50px', '75px', '50px')),
+					A6($tptshepo$elm_flex_layout$Examples$StaticExample$blockStyles, model.direction, '#009688', '75px', '50px', '75px', '50px')),
 				_List_fromArray(
 					[
 						$elm$html$Html$text('1')
@@ -10711,7 +10711,7 @@ var $author$project$Examples$StaticExample$viewBoxContainer = function (model) {
 				$elm$html$Html$div,
 				_Utils_ap(
 					_List_Nil,
-					A6($author$project$Examples$StaticExample$blockStyles, model.direction, '#3949ab', '75px', '100px', '125px', '50px')),
+					A6($tptshepo$elm_flex_layout$Examples$StaticExample$blockStyles, model.direction, '#3949ab', '75px', '100px', '125px', '50px')),
 				_List_fromArray(
 					[
 						$elm$html$Html$text('2')
@@ -10720,7 +10720,7 @@ var $author$project$Examples$StaticExample$viewBoxContainer = function (model) {
 				$elm$html$Html$div,
 				_Utils_ap(
 					_List_Nil,
-					A6($author$project$Examples$StaticExample$blockStyles, model.direction, '#9c27b0', '75px', '50px', '75px', '50px')),
+					A6($tptshepo$elm_flex_layout$Examples$StaticExample$blockStyles, model.direction, '#9c27b0', '75px', '50px', '75px', '50px')),
 				_List_fromArray(
 					[
 						$elm$html$Html$text('3')
@@ -10729,7 +10729,7 @@ var $author$project$Examples$StaticExample$viewBoxContainer = function (model) {
 				$elm$html$Html$div,
 				_Utils_ap(
 					_List_Nil,
-					A6($author$project$Examples$StaticExample$blockStyles, model.direction, '#b08752', '75px', '75px', '100px', '50px')),
+					A6($tptshepo$elm_flex_layout$Examples$StaticExample$blockStyles, model.direction, '#b08752', '75px', '75px', '100px', '50px')),
 				_List_fromArray(
 					[
 						$elm$html$Html$text('4')
@@ -10738,21 +10738,21 @@ var $author$project$Examples$StaticExample$viewBoxContainer = function (model) {
 				$elm$html$Html$div,
 				_Utils_ap(
 					_List_Nil,
-					A6($author$project$Examples$StaticExample$blockStyles, model.direction, '#5ca6b0', '75px', '50px', '75px', '50px')),
+					A6($tptshepo$elm_flex_layout$Examples$StaticExample$blockStyles, model.direction, '#5ca6b0', '75px', '50px', '75px', '50px')),
 				_List_fromArray(
 					[
 						$elm$html$Html$text('5')
 					]))
 			]));
 };
-var $author$project$Examples$StaticExample$viewPageTitleContainer = A2(
+var $tptshepo$elm_flex_layout$Examples$StaticExample$viewPageTitleContainer = A2(
 	$elm$html$Html$div,
 	_Utils_ap(
 		_List_fromArray(
 			[
 				$elm$html$Html$Attributes$class('page-title')
 			]),
-		A3($author$project$Flex$fxLayout, $author$project$Flex$column, $author$project$Flex$stretch, $author$project$Flex$start)),
+		A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$column, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
 	_List_fromArray(
 		[
 			A2(
@@ -10762,7 +10762,7 @@ var $author$project$Examples$StaticExample$viewPageTitleContainer = A2(
 					[
 						A2($elm$html$Html$Attributes$style, 'height', '50px')
 					]),
-				A3($author$project$Flex$fxLayout, $author$project$Flex$row, $author$project$Flex$start, $author$project$Flex$center)),
+				A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$row, $tptshepo$elm_flex_layout$Flex$start, $tptshepo$elm_flex_layout$Flex$center)),
 			_List_fromArray(
 				[
 					A2(
@@ -10780,7 +10780,7 @@ var $author$project$Examples$StaticExample$viewPageTitleContainer = A2(
 					_List_Nil,
 					_List_fromArray(
 						[
-							$elm$html$Html$text('Version: 0.0.1')
+							$elm$html$Html$text('Version: 1.0.0')
 						]))
 				])),
 			A2(
@@ -10796,11 +10796,11 @@ var $author$project$Examples$StaticExample$viewPageTitleContainer = A2(
 					_List_Nil,
 					_List_fromArray(
 						[
-							$elm$html$Html$text('Simple library for working with CSS flexbox layouts.')
+							$elm$html$Html$text('Elm Flex Layout provides a layout API for using Flexbox CSS. This module provides Elm developers with layout features using a custom Layout API.')
 						]))
 				]))
 		]));
-var $author$project$Examples$StaticExample$LayoutDirection = F2(
+var $tptshepo$elm_flex_layout$Examples$StaticExample$LayoutDirection = F2(
 	function (a, b) {
 		return {$: 'LayoutDirection', a: a, b: b};
 	});
@@ -10827,7 +10827,7 @@ var $elm$html$Html$Events$onCheck = function (tagger) {
 		'change',
 		A2($elm$json$Json$Decode$map, tagger, $elm$html$Html$Events$targetChecked));
 };
-var $author$project$Examples$StaticExample$viewRadioButton = F4(
+var $tptshepo$elm_flex_layout$Examples$StaticExample$viewRadioButton = F4(
 	function (group, innerText, innerChecked, onCheckMsg) {
 		return A2(
 			$elm$html$Html$div,
@@ -10860,7 +10860,7 @@ var $author$project$Examples$StaticExample$viewRadioButton = F4(
 						]))
 				]));
 	});
-var $author$project$Examples$StaticExample$viewToggleDirectionContainer = function (model) {
+var $tptshepo$elm_flex_layout$Examples$StaticExample$viewToggleDirectionContainer = function (model) {
 	return A2(
 		$elm$html$Html$div,
 		_Utils_ap(
@@ -10868,7 +10868,7 @@ var $author$project$Examples$StaticExample$viewToggleDirectionContainer = functi
 				[
 					$elm$html$Html$Attributes$class('toggle-item-container')
 				]),
-			A3($author$project$Flex$fxLayout, $author$project$Flex$column, $author$project$Flex$stretch, $author$project$Flex$start)),
+			A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$column, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
 		_List_fromArray(
 			[
 				A2(
@@ -10885,32 +10885,32 @@ var $author$project$Examples$StaticExample$viewToggleDirectionContainer = functi
 				_List_fromArray(
 					[
 						A4(
-						$author$project$Examples$StaticExample$viewRadioButton,
+						$tptshepo$elm_flex_layout$Examples$StaticExample$viewRadioButton,
 						'direction',
 						'Row',
-						_Utils_eq(model.direction, $author$project$Flex$row),
-						$author$project$Examples$StaticExample$LayoutDirection($author$project$Flex$row)),
+						_Utils_eq(model.direction, $tptshepo$elm_flex_layout$Flex$row),
+						$tptshepo$elm_flex_layout$Examples$StaticExample$LayoutDirection($tptshepo$elm_flex_layout$Flex$row)),
 						A4(
-						$author$project$Examples$StaticExample$viewRadioButton,
+						$tptshepo$elm_flex_layout$Examples$StaticExample$viewRadioButton,
 						'direction',
 						'Column',
-						_Utils_eq(model.direction, $author$project$Flex$column),
-						$author$project$Examples$StaticExample$LayoutDirection($author$project$Flex$column))
+						_Utils_eq(model.direction, $tptshepo$elm_flex_layout$Flex$column),
+						$tptshepo$elm_flex_layout$Examples$StaticExample$LayoutDirection($tptshepo$elm_flex_layout$Flex$column))
 					]))
 			]));
 };
-var $author$project$Examples$StaticExample$HorizontalAlignment = F2(
+var $tptshepo$elm_flex_layout$Examples$StaticExample$HorizontalAlignment = F2(
 	function (a, b) {
 		return {$: 'HorizontalAlignment', a: a, b: b};
 	});
-var $author$project$Flex$End = {$: 'End'};
-var $author$project$Flex$end = $author$project$Flex$End;
-var $author$project$Flex$SpaceBetween = {$: 'SpaceBetween'};
-var $author$project$Flex$spaceBetween = $author$project$Flex$SpaceBetween;
-var $author$project$Flex$SpaceEvenly = {$: 'SpaceEvenly'};
-var $author$project$Flex$spaceEvenly = $author$project$Flex$SpaceEvenly;
-var $author$project$Examples$StaticExample$viewToggleHorizontalContainer = function (model) {
-	var title = _Utils_eq(model.direction, $author$project$Flex$row) ? 'Alignment (horizontal)' : 'Alignment (vertical)';
+var $tptshepo$elm_flex_layout$Flex$End = {$: 'End'};
+var $tptshepo$elm_flex_layout$Flex$end = $tptshepo$elm_flex_layout$Flex$End;
+var $tptshepo$elm_flex_layout$Flex$SpaceBetween = {$: 'SpaceBetween'};
+var $tptshepo$elm_flex_layout$Flex$spaceBetween = $tptshepo$elm_flex_layout$Flex$SpaceBetween;
+var $tptshepo$elm_flex_layout$Flex$SpaceEvenly = {$: 'SpaceEvenly'};
+var $tptshepo$elm_flex_layout$Flex$spaceEvenly = $tptshepo$elm_flex_layout$Flex$SpaceEvenly;
+var $tptshepo$elm_flex_layout$Examples$StaticExample$viewToggleHorizontalContainer = function (model) {
+	var title = _Utils_eq(model.direction, $tptshepo$elm_flex_layout$Flex$row) ? 'Alignment (horizontal)' : 'Alignment (vertical)';
 	return A2(
 		$elm$html$Html$div,
 		_Utils_ap(
@@ -10918,7 +10918,7 @@ var $author$project$Examples$StaticExample$viewToggleHorizontalContainer = funct
 				[
 					$elm$html$Html$Attributes$class('toggle-item-container')
 				]),
-			A3($author$project$Flex$fxLayout, $author$project$Flex$column, $author$project$Flex$stretch, $author$project$Flex$start)),
+			A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$column, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
 		_List_fromArray(
 			[
 				A2(
@@ -10935,50 +10935,50 @@ var $author$project$Examples$StaticExample$viewToggleHorizontalContainer = funct
 				_List_fromArray(
 					[
 						A4(
-						$author$project$Examples$StaticExample$viewRadioButton,
+						$tptshepo$elm_flex_layout$Examples$StaticExample$viewRadioButton,
 						'hAlign',
 						'Start',
-						_Utils_eq(model.horizontalAlignment, $author$project$Flex$start),
-						$author$project$Examples$StaticExample$HorizontalAlignment($author$project$Flex$start)),
+						_Utils_eq(model.horizontalAlignment, $tptshepo$elm_flex_layout$Flex$start),
+						$tptshepo$elm_flex_layout$Examples$StaticExample$HorizontalAlignment($tptshepo$elm_flex_layout$Flex$start)),
 						A4(
-						$author$project$Examples$StaticExample$viewRadioButton,
+						$tptshepo$elm_flex_layout$Examples$StaticExample$viewRadioButton,
 						'hAlign',
 						'Center',
-						_Utils_eq(model.horizontalAlignment, $author$project$Flex$center),
-						$author$project$Examples$StaticExample$HorizontalAlignment($author$project$Flex$center)),
+						_Utils_eq(model.horizontalAlignment, $tptshepo$elm_flex_layout$Flex$center),
+						$tptshepo$elm_flex_layout$Examples$StaticExample$HorizontalAlignment($tptshepo$elm_flex_layout$Flex$center)),
 						A4(
-						$author$project$Examples$StaticExample$viewRadioButton,
+						$tptshepo$elm_flex_layout$Examples$StaticExample$viewRadioButton,
 						'hAlign',
 						'End',
-						_Utils_eq(model.horizontalAlignment, $author$project$Flex$end),
-						$author$project$Examples$StaticExample$HorizontalAlignment($author$project$Flex$end)),
+						_Utils_eq(model.horizontalAlignment, $tptshepo$elm_flex_layout$Flex$end),
+						$tptshepo$elm_flex_layout$Examples$StaticExample$HorizontalAlignment($tptshepo$elm_flex_layout$Flex$end)),
 						A4(
-						$author$project$Examples$StaticExample$viewRadioButton,
+						$tptshepo$elm_flex_layout$Examples$StaticExample$viewRadioButton,
 						'hAlign',
 						'Space Around',
-						_Utils_eq(model.horizontalAlignment, $author$project$Flex$spaceAround),
-						$author$project$Examples$StaticExample$HorizontalAlignment($author$project$Flex$spaceAround)),
+						_Utils_eq(model.horizontalAlignment, $tptshepo$elm_flex_layout$Flex$spaceAround),
+						$tptshepo$elm_flex_layout$Examples$StaticExample$HorizontalAlignment($tptshepo$elm_flex_layout$Flex$spaceAround)),
 						A4(
-						$author$project$Examples$StaticExample$viewRadioButton,
+						$tptshepo$elm_flex_layout$Examples$StaticExample$viewRadioButton,
 						'hAlign',
 						'Space Between',
-						_Utils_eq(model.horizontalAlignment, $author$project$Flex$spaceBetween),
-						$author$project$Examples$StaticExample$HorizontalAlignment($author$project$Flex$spaceBetween)),
+						_Utils_eq(model.horizontalAlignment, $tptshepo$elm_flex_layout$Flex$spaceBetween),
+						$tptshepo$elm_flex_layout$Examples$StaticExample$HorizontalAlignment($tptshepo$elm_flex_layout$Flex$spaceBetween)),
 						A4(
-						$author$project$Examples$StaticExample$viewRadioButton,
+						$tptshepo$elm_flex_layout$Examples$StaticExample$viewRadioButton,
 						'hAlign',
 						'Space Evenly',
-						_Utils_eq(model.horizontalAlignment, $author$project$Flex$spaceEvenly),
-						$author$project$Examples$StaticExample$HorizontalAlignment($author$project$Flex$spaceEvenly))
+						_Utils_eq(model.horizontalAlignment, $tptshepo$elm_flex_layout$Flex$spaceEvenly),
+						$tptshepo$elm_flex_layout$Examples$StaticExample$HorizontalAlignment($tptshepo$elm_flex_layout$Flex$spaceEvenly))
 					]))
 			]));
 };
-var $author$project$Examples$StaticExample$VerticalAlignment = F2(
+var $tptshepo$elm_flex_layout$Examples$StaticExample$VerticalAlignment = F2(
 	function (a, b) {
 		return {$: 'VerticalAlignment', a: a, b: b};
 	});
-var $author$project$Examples$StaticExample$viewToggleVerticalContainer = function (model) {
-	var title = _Utils_eq(model.direction, $author$project$Flex$row) ? 'Alignment (vertical)' : 'Alignment (horizontal)';
+var $tptshepo$elm_flex_layout$Examples$StaticExample$viewToggleVerticalContainer = function (model) {
+	var title = _Utils_eq(model.direction, $tptshepo$elm_flex_layout$Flex$row) ? 'Alignment (vertical)' : 'Alignment (horizontal)';
 	return A2(
 		$elm$html$Html$div,
 		_Utils_ap(
@@ -10986,7 +10986,7 @@ var $author$project$Examples$StaticExample$viewToggleVerticalContainer = functio
 				[
 					$elm$html$Html$Attributes$class('toggle-item-container')
 				]),
-			A3($author$project$Flex$fxLayout, $author$project$Flex$column, $author$project$Flex$stretch, $author$project$Flex$start)),
+			A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$column, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
 		_List_fromArray(
 			[
 				A2(
@@ -11003,33 +11003,33 @@ var $author$project$Examples$StaticExample$viewToggleVerticalContainer = functio
 				_List_fromArray(
 					[
 						A4(
-						$author$project$Examples$StaticExample$viewRadioButton,
+						$tptshepo$elm_flex_layout$Examples$StaticExample$viewRadioButton,
 						'vAlign',
 						'Start',
-						_Utils_eq(model.verticalAlignment, $author$project$Flex$start),
-						$author$project$Examples$StaticExample$VerticalAlignment($author$project$Flex$start)),
+						_Utils_eq(model.verticalAlignment, $tptshepo$elm_flex_layout$Flex$start),
+						$tptshepo$elm_flex_layout$Examples$StaticExample$VerticalAlignment($tptshepo$elm_flex_layout$Flex$start)),
 						A4(
-						$author$project$Examples$StaticExample$viewRadioButton,
+						$tptshepo$elm_flex_layout$Examples$StaticExample$viewRadioButton,
 						'vAlign',
 						'Center',
-						_Utils_eq(model.verticalAlignment, $author$project$Flex$center),
-						$author$project$Examples$StaticExample$VerticalAlignment($author$project$Flex$center)),
+						_Utils_eq(model.verticalAlignment, $tptshepo$elm_flex_layout$Flex$center),
+						$tptshepo$elm_flex_layout$Examples$StaticExample$VerticalAlignment($tptshepo$elm_flex_layout$Flex$center)),
 						A4(
-						$author$project$Examples$StaticExample$viewRadioButton,
+						$tptshepo$elm_flex_layout$Examples$StaticExample$viewRadioButton,
 						'vAlign',
 						'End',
-						_Utils_eq(model.verticalAlignment, $author$project$Flex$end),
-						$author$project$Examples$StaticExample$VerticalAlignment($author$project$Flex$end)),
+						_Utils_eq(model.verticalAlignment, $tptshepo$elm_flex_layout$Flex$end),
+						$tptshepo$elm_flex_layout$Examples$StaticExample$VerticalAlignment($tptshepo$elm_flex_layout$Flex$end)),
 						A4(
-						$author$project$Examples$StaticExample$viewRadioButton,
+						$tptshepo$elm_flex_layout$Examples$StaticExample$viewRadioButton,
 						'vAlign',
 						'Stretch',
-						_Utils_eq(model.verticalAlignment, $author$project$Flex$stretch),
-						$author$project$Examples$StaticExample$VerticalAlignment($author$project$Flex$stretch))
+						_Utils_eq(model.verticalAlignment, $tptshepo$elm_flex_layout$Flex$stretch),
+						$tptshepo$elm_flex_layout$Examples$StaticExample$VerticalAlignment($tptshepo$elm_flex_layout$Flex$stretch))
 					]))
 			]));
 };
-var $author$project$Examples$StaticExample$viewTogglesContainer = function (model) {
+var $tptshepo$elm_flex_layout$Examples$StaticExample$viewTogglesContainer = function (model) {
 	return A2(
 		$elm$html$Html$div,
 		_Utils_ap(
@@ -11037,15 +11037,15 @@ var $author$project$Examples$StaticExample$viewTogglesContainer = function (mode
 				[
 					$elm$html$Html$Attributes$class('toggle-container')
 				]),
-			A3($author$project$Flex$fxLayout, $author$project$Flex$row, $author$project$Flex$spaceAround, $author$project$Flex$start)),
+			A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$row, $tptshepo$elm_flex_layout$Flex$spaceAround, $tptshepo$elm_flex_layout$Flex$start)),
 		_List_fromArray(
 			[
-				$author$project$Examples$StaticExample$viewToggleDirectionContainer(model),
-				$author$project$Examples$StaticExample$viewToggleHorizontalContainer(model),
-				$author$project$Examples$StaticExample$viewToggleVerticalContainer(model)
+				$tptshepo$elm_flex_layout$Examples$StaticExample$viewToggleDirectionContainer(model),
+				$tptshepo$elm_flex_layout$Examples$StaticExample$viewToggleHorizontalContainer(model),
+				$tptshepo$elm_flex_layout$Examples$StaticExample$viewToggleVerticalContainer(model)
 			]));
 };
-var $author$project$Examples$StaticExample$view = function (model) {
+var $tptshepo$elm_flex_layout$Examples$StaticExample$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
 		_List_fromArray(
@@ -11055,7 +11055,7 @@ var $author$project$Examples$StaticExample$view = function (model) {
 		_List_fromArray(
 			[
 				A2($elm$html$Html$br, _List_Nil, _List_Nil),
-				$author$project$Examples$StaticExample$viewPageTitleContainer,
+				$tptshepo$elm_flex_layout$Examples$StaticExample$viewPageTitleContainer,
 				A2($elm$html$Html$br, _List_Nil, _List_Nil),
 				A2(
 				$elm$html$Html$div,
@@ -11087,24 +11087,24 @@ var $author$project$Examples$StaticExample$view = function (model) {
 								$elm$html$Html$div,
 								_Utils_ap(
 									_List_Nil,
-									A3($author$project$Flex$fxLayout, $author$project$Flex$column, $author$project$Flex$stretch, $author$project$Flex$start)),
+									A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$column, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
 								_List_fromArray(
 									[
-										$author$project$Examples$StaticExample$viewBoxContainer(model),
-										$author$project$Examples$StaticExample$viewTogglesContainer(model)
+										$tptshepo$elm_flex_layout$Examples$StaticExample$viewBoxContainer(model),
+										$tptshepo$elm_flex_layout$Examples$StaticExample$viewTogglesContainer(model)
 									]))
 							]))
 					]))
 			]));
 };
-var $author$project$Examples$StaticExample$main = $elm$browser$Browser$element(
+var $tptshepo$elm_flex_layout$Examples$StaticExample$main = $elm$browser$Browser$element(
 	{
-		init: $author$project$Examples$StaticExample$init,
+		init: $tptshepo$elm_flex_layout$Examples$StaticExample$init,
 		subscriptions: function (_v0) {
 			return $elm$core$Platform$Sub$none;
 		},
-		update: $author$project$Examples$StaticExample$update,
-		view: $author$project$Examples$StaticExample$view
+		update: $tptshepo$elm_flex_layout$Examples$StaticExample$update,
+		view: $tptshepo$elm_flex_layout$Examples$StaticExample$view
 	});
-_Platform_export({'Examples':{'StaticExample':{'init':$author$project$Examples$StaticExample$main(
+_Platform_export({'Examples':{'StaticExample':{'init':$tptshepo$elm_flex_layout$Examples$StaticExample$main(
 	$elm$json$Json$Decode$succeed(_Utils_Tuple0))({"versions":{"elm":"0.19.1"},"types":{"message":"Examples.StaticExample.Msg","aliases":{},"unions":{"Examples.StaticExample.Msg":{"args":[],"tags":{"LayoutDirection":["Flex.Direction","Basics.Bool"],"HorizontalAlignment":["Flex.Alignment","Basics.Bool"],"VerticalAlignment":["Flex.Alignment","Basics.Bool"]}},"Flex.Alignment":{"args":[],"tags":{"Start":[],"Center":[],"End":[],"SpaceBetween":[],"SpaceAround":[],"SpaceEvenly":[],"Stretch":[]}},"Basics.Bool":{"args":[],"tags":{"True":[],"False":[]}},"Flex.Direction":{"args":[],"tags":{"Row":[],"Column":[]}}}}})}}});}(this));
