@@ -127,11 +127,11 @@ viewPageTitleContainer =
     div ([ class "page-title" ] ++ fxLayout Flex.column Flex.stretch Flex.start)
         [ div ([ style "height" "50px" ] ++ fxLayout Flex.row Flex.start Flex.center)
             [ h5 [ style "margin-right" "20px" ] [ text "Elm Flex Layout Demo:" ]
-            , span [] [ text "Version: 0.0.1" ]
+            , span [] [ text "Version: 1.0.0" ]
             ]
         , div [ style "height" "50px" ]
             [ span []
-                [ text "Simple library for working with CSS flexbox layouts."
+                [ text "Elm Flex Layout provides a layout API for using Flexbox CSS. This module provides Elm developers with layout features using a custom Layout API."
                 ]
             ]
         ]
