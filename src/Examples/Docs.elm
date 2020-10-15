@@ -1,4 +1,4 @@
-module Examples.StaticExample exposing (..)
+module Examples.Docs exposing (..)
 
 import Browser
 import Flex exposing (..)
