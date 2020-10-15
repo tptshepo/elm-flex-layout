@@ -5405,7 +5405,7 @@ var $tptshepo$elm_flex_layout$Examples$Docs$viewPageTitleContainer = A2(
 					_List_Nil,
 					_List_fromArray(
 						[
-							$elm$html$Html$text('Version: 1.0.0')
+							$elm$html$Html$text('Version: 1.0.2')
 						]))
 				])),
 			A2(

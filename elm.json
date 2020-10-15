@@ -3,7 +3,7 @@
   "name": "tptshepo/elm-flex-layout",
   "summary": "Elm Flex Layout provides a layout API for using Flexbox CSS",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "exposed-modules": ["Flex"],
   "elm-version": "0.19.0 <= v < 0.20.0",
   "dependencies": {

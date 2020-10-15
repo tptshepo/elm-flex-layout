@@ -127,7 +127,7 @@ viewPageTitleContainer =
     div ([ class "page-title" ] ++ fxLayout Flex.column Flex.stretch Flex.start)
         [ div ([ style "height" "50px" ] ++ fxLayout Flex.row Flex.start Flex.center)
             [ h5 [ style "margin-right" "20px" ] [ text "Elm Flex Layout:" ]
-            , span [] [ text "Version: 1.0.0" ]
+            , span [] [ text "Version: 1.0.2" ]
             ]
         , div [ style "height" "50px" ]
             [ span []
