@@ -10773,7 +10773,7 @@ var $tptshepo$elm_flex_layout$Examples$StaticExample$viewPageTitleContainer = A2
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text('Elm Flex Layout Demo:')
+							$elm$html$Html$text('Elm Flex Layout:')
 						])),
 					A2(
 					$elm$html$Html$span,
@@ -10796,7 +10796,7 @@ var $tptshepo$elm_flex_layout$Examples$StaticExample$viewPageTitleContainer = A2
 					_List_Nil,
 					_List_fromArray(
 						[
-							$elm$html$Html$text('Elm Flex Layout provides a layout API for using Flexbox CSS. This module provides Elm developers with layout features using a custom Layout API.')
+							$elm$html$Html$text('Elm Flex Layout provides a layout API for using Flexbox CSS.')
 						]))
 				]))
 		]));
@@ -11081,7 +11081,7 @@ var $tptshepo$elm_flex_layout$Examples$StaticExample$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Layout Children with \'fxLayout\'')
+										$elm$html$Html$text('API: fxLayout')
 									])),
 								A2(
 								$elm$html$Html$div,

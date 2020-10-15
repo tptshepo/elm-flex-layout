@@ -126,12 +126,12 @@ viewPageTitleContainer : Html Msg
 viewPageTitleContainer =
     div ([ class "page-title" ] ++ fxLayout Flex.column Flex.stretch Flex.start)
         [ div ([ style "height" "50px" ] ++ fxLayout Flex.row Flex.start Flex.center)
-            [ h5 [ style "margin-right" "20px" ] [ text "Elm Flex Layout Demo:" ]
+            [ h5 [ style "margin-right" "20px" ] [ text "Elm Flex Layout:" ]
             , span [] [ text "Version: 1.0.0" ]
             ]
         , div [ style "height" "50px" ]
             [ span []
-                [ text "Elm Flex Layout provides a layout API for using Flexbox CSS. This module provides Elm developers with layout features using a custom Layout API."
+                [ text "Elm Flex Layout provides a layout API for using Flexbox CSS."
                 ]
             ]
         ]
@@ -239,7 +239,7 @@ view model =
         , br [] []
         , div [ class "card" ]
             [ div [ class "card-body" ]
-                [ h5 [ class "card-title" ] [ text "Layout Children with 'fxLayout'" ]
+                [ h5 [ class "card-title" ] [ text "API: fxLayout" ]
                 , div ([] ++ fxLayout Flex.column Flex.stretch Flex.start)
                     [ viewBoxContainer model
                     , viewTogglesContainer model
