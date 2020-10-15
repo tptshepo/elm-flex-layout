@@ -2,7 +2,6 @@ module Flex exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Maybe exposing (withDefault)
 
 
 type Direction
@@ -182,6 +181,7 @@ fxLayout direction alignHorizontal alignVertical =
                 ]
 
             else
+                -- Column
                 [ style "place-content" (aHorizontal ++ " " ++ aVertical)
                 , style "align-items" aHorizontal
                 ]
