@@ -1,10 +1,15 @@
 module Flex exposing
-    ( Direction, row, column
-    , start, end, center, stretch, spaceBetween, spaceAround, spaceEvenly
-    , fxLayout
+    ( fxLayout
+    , Direction, row, column
+    , Alignment, start, end, center, stretch, spaceBetween, spaceAround, spaceEvenly
     )
 
-{-| Elm Flex Layout provides a layout API for using Flexbox CSS. This module provides Elm developers with layout features using a custom Layout API.
+{-| Flex provides a layout API for using Flexbox CSS.
+
+
+# API
+
+@docs fxLayout
 
 
 # Direction
@@ -14,12 +19,7 @@ module Flex exposing
 
 # Alignment
 
-@docs start, end, center, stretch, spaceBetween, spaceAround, spaceEvenly
-
-
-# API functions
-
-@docs fxLayout
+@docs Alignment, start, end, center, stretch, spaceBetween, spaceAround, spaceEvenly
 
 -}
 
@@ -41,7 +41,7 @@ row =
     Row
 
 
-{-| `column`: same as row but top to bottom
+{-| `column`: Same as row but top to bottom
 -}
 column : Direction
 column =
@@ -81,6 +81,13 @@ end =
     End
 
 
+{-| `stretch` to fill the container (still respect min-width/max-width)
+-}
+stretch : Alignment
+stretch =
+    Stretch
+
+
 {-| `space-between` items are evenly distributed in the line; first item is on the start line, last item on the end line.
 -}
 spaceBetween : Alignment
@@ -102,14 +109,13 @@ spaceEvenly =
     SpaceEvenly
 
 
-{-| `stretch` to fill the container (still respect min-width/max-width)
--}
-stretch : Alignment
-stretch =
-    Stretch
+{-| Returns an array of `Html.Attributes.style` required to align the child items.
 
+    Usage
 
-{-| Returns an array of `Html.Attributes.style` required to align the child items
+    fxLayout Direction Alignment Alignment
+
+    Example
 
     div ([] ++ fxLayout Flex.row Flex.spaceAround Flex.center)
         [ div [] [ text "1" ]
