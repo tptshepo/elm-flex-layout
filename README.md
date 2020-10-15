@@ -1,8 +1,6 @@
 # Elm Flex-Layout
 
-Elm Flex Layout provides a layout API for using Flexbox CSS. This module provides Elm developers with layout features using a custom Layout API.
-
-Elm Flex Layout automates the process of applying appropriate Flexbox CSS to browser view hierarchies.
+Elm Flex Layout provides a layout API for using Flexbox CSS.
 
 ### Getting started
 
@@ -22,7 +20,7 @@ https://tptshepo.github.io/elm-flex-layout
 
 ##### fxLayout
 
-![image](docs/assets/images/row_spacearound_center.png)
+![image](https://tptshepo.github.io/elm-flex-layout/assets/images/row_spacearound_center.png)
 
 ```elm
 import Flex
