@@ -4,7 +4,7 @@
   "description": "Elm package for working with Flex layouts",
   "main": "index.js",
   "scripts": {
-    "watch": "chokidar 'src/Examples/**/*.elm' -c 'elm make src/Examples/StaticExample.elm --output=src/Examples/build/staticExample.js --debug' --initial",
+    "start": "chokidar 'src/Examples/**/*.elm' -c 'elm make src/Examples/StaticExample.elm --output=src/Examples/build/staticExample.js --debug' --initial",
     "test": "chokidar 'tests/**/*.elm' -c 'elm-test' --initial"
   },
   "dependencies": {
