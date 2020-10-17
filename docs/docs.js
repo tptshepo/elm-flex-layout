@@ -5198,9 +5198,9 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $elm$html$Html$div = _VirtualDom_node('div');
 var $tptshepo$elm_flex_layout$Flex$Column = {$: 'Column'};
 var $tptshepo$elm_flex_layout$Flex$column = $tptshepo$elm_flex_layout$Flex$Column;
-var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
 var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
 var $tptshepo$elm_flex_layout$Flex$fxLayout = F3(
@@ -5290,6 +5290,7 @@ var $tptshepo$elm_flex_layout$Flex$fxLayout = F3(
 		var styles = _Utils_ap(defaultStyles, computedStyles);
 		return styles;
 	});
+var $tptshepo$elm_flex_layout$Flex$fxColumn = $tptshepo$elm_flex_layout$Flex$fxLayout($tptshepo$elm_flex_layout$Flex$column);
 var $elm$html$Html$h5 = _VirtualDom_node('h5');
 var $tptshepo$elm_flex_layout$Flex$Start = {$: 'Start'};
 var $tptshepo$elm_flex_layout$Flex$start = $tptshepo$elm_flex_layout$Flex$Start;
@@ -5369,6 +5370,7 @@ var $tptshepo$elm_flex_layout$Examples$Docs$viewBoxContainer = function (model) 
 					]))
 			]));
 };
+var $tptshepo$elm_flex_layout$Flex$fxRow = $tptshepo$elm_flex_layout$Flex$fxLayout($tptshepo$elm_flex_layout$Flex$row);
 var $elm$html$Html$span = _VirtualDom_node('span');
 var $tptshepo$elm_flex_layout$Examples$Docs$viewPageTitleContainer = A2(
 	$elm$html$Html$div,
@@ -5377,7 +5379,7 @@ var $tptshepo$elm_flex_layout$Examples$Docs$viewPageTitleContainer = A2(
 			[
 				$elm$html$Html$Attributes$class('page-title')
 			]),
-		A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$column, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
+		A2($tptshepo$elm_flex_layout$Flex$fxColumn, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
 	_List_fromArray(
 		[
 			A2(
@@ -5387,7 +5389,7 @@ var $tptshepo$elm_flex_layout$Examples$Docs$viewPageTitleContainer = A2(
 					[
 						A2($elm$html$Html$Attributes$style, 'height', '50px')
 					]),
-				A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$row, $tptshepo$elm_flex_layout$Flex$start, $tptshepo$elm_flex_layout$Flex$center)),
+				A2($tptshepo$elm_flex_layout$Flex$fxRow, $tptshepo$elm_flex_layout$Flex$start, $tptshepo$elm_flex_layout$Flex$center)),
 			_List_fromArray(
 				[
 					A2(
@@ -5511,7 +5513,7 @@ var $tptshepo$elm_flex_layout$Examples$Docs$viewToggleDirectionContainer = funct
 				[
 					$elm$html$Html$Attributes$class('toggle-item-container')
 				]),
-			A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$column, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
+			A2($tptshepo$elm_flex_layout$Flex$fxColumn, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
 		_List_fromArray(
 			[
 				A2(
@@ -5561,7 +5563,7 @@ var $tptshepo$elm_flex_layout$Examples$Docs$viewToggleHorizontalContainer = func
 				[
 					$elm$html$Html$Attributes$class('toggle-item-container')
 				]),
-			A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$column, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
+			A2($tptshepo$elm_flex_layout$Flex$fxColumn, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
 		_List_fromArray(
 			[
 				A2(
@@ -5629,7 +5631,7 @@ var $tptshepo$elm_flex_layout$Examples$Docs$viewToggleVerticalContainer = functi
 				[
 					$elm$html$Html$Attributes$class('toggle-item-container')
 				]),
-			A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$column, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
+			A2($tptshepo$elm_flex_layout$Flex$fxColumn, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
 		_List_fromArray(
 			[
 				A2(
@@ -5680,7 +5682,7 @@ var $tptshepo$elm_flex_layout$Examples$Docs$viewTogglesContainer = function (mod
 				[
 					$elm$html$Html$Attributes$class('toggle-container')
 				]),
-			A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$row, $tptshepo$elm_flex_layout$Flex$spaceAround, $tptshepo$elm_flex_layout$Flex$start)),
+			A2($tptshepo$elm_flex_layout$Flex$fxRow, $tptshepo$elm_flex_layout$Flex$spaceAround, $tptshepo$elm_flex_layout$Flex$start)),
 		_List_fromArray(
 			[
 				$tptshepo$elm_flex_layout$Examples$Docs$viewToggleDirectionContainer(model),
@@ -5730,7 +5732,7 @@ var $tptshepo$elm_flex_layout$Examples$Docs$view = function (model) {
 								$elm$html$Html$div,
 								_Utils_ap(
 									_List_Nil,
-									A3($tptshepo$elm_flex_layout$Flex$fxLayout, $tptshepo$elm_flex_layout$Flex$column, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
+									A2($tptshepo$elm_flex_layout$Flex$fxColumn, $tptshepo$elm_flex_layout$Flex$stretch, $tptshepo$elm_flex_layout$Flex$start)),
 								_List_fromArray(
 									[
 										$tptshepo$elm_flex_layout$Examples$Docs$viewBoxContainer(model),

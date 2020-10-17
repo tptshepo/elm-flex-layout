@@ -3,8 +3,8 @@
   "version": "1.0.2",
   "description": "Elm Flex Layout provides a layout API for using Flexbox CSS",
   "scripts": {
-    "dev": "chokidar 'src/Examples/**/*.elm' -c 'elm make src/Examples/Docs.elm --output=docs/docs.js --debug' --initial",
-    "start": "chokidar 'src/Examples/**/*.elm' -c 'elm make src/Examples/Docs.elm --output=docs/docs.js' --initial",
+    "dev": "chokidar 'src/**/*.elm' -c 'elm make src/Examples/Docs.elm --output=docs/docs.js --debug' --initial",
+    "start": "chokidar 'src/**/*.elm' -c 'elm make src/Examples/Docs.elm --output=docs/docs.js' --initial",
     "build": "elm make src/Examples/Docs.elm --output=docs/docs.js",
     "test": "elm-test",
     "test:watch": "chokidar 'tests/**/*.elm' -c 'elm-test' --initial"

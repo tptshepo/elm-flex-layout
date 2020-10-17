@@ -1,15 +1,45 @@
 module FlexTests exposing (..)
 
 import Expect exposing (Expectation)
-import Flex exposing (fxLayout)
+import Flex exposing (fxColumn, fxLayout, fxRow)
 import Fuzz exposing (Fuzzer, int, list, string)
 import Html
 import Html.Attributes exposing (style)
 import Test exposing (..)
 
 
-
--- fxLayoutTests : Test
+fxRowTests : Test
+fxRowTests =
+    describe "fxRow"
+        [ describe "fxRow ... start"
+            [ test "center start" <|
+                \_ ->
+                    let
+                        styleList =
+                            [ style "flex-direction" "row"
+                            , style "display" "flex"
+                            , style "box-sizing" "border-box"
+                            , style "place-content" "flex-start center"
+                            , style "align-items" "flex-start"
+                            ]
+                    in
+                    Expect.equal styleList (fxRow Flex.center Flex.start)
+            ]
+        , describe "fxRow start ..."
+            [ test "start end" <|
+                \_ ->
+                    let
+                        styleList =
+                            [ style "flex-direction" "row"
+                            , style "display" "flex"
+                            , style "box-sizing" "border-box"
+                            , style "place-content" "flex-end flex-start"
+                            , style "align-items" "flex-end"
+                            ]
+                    in
+                    Expect.equal styleList (fxRow Flex.start Flex.end)
+            ]
+        ]
 
 
 fxLayoutRowTests : Test
@@ -244,5 +274,39 @@ fxLayoutColumnTests =
                             ]
                     in
                     Expect.equal styleList (fxLayout Flex.column Flex.stretch Flex.start)
+            ]
+        ]
+
+
+fxColumnTests : Test
+fxColumnTests =
+    describe "fxColumn"
+        [ describe "fxColumn start ..."
+            [ test "start center" <|
+                \_ ->
+                    let
+                        styleList =
+                            [ style "flex-direction" "column"
+                            , style "display" "flex"
+                            , style "box-sizing" "border-box"
+                            , style "place-content" "flex-start center"
+                            , style "align-items" "flex-start"
+                            ]
+                    in
+                    Expect.equal styleList (fxColumn Flex.start Flex.center)
+            ]
+        , describe "fxColumn ... start"
+            [ test "center start" <|
+                \_ ->
+                    let
+                        styleList =
+                            [ style "flex-direction" "column"
+                            , style "display" "flex"
+                            , style "box-sizing" "border-box"
+                            , style "place-content" "center flex-start"
+                            , style "align-items" "center"
+                            ]
+                    in
+                    Expect.equal styleList (fxColumn Flex.center Flex.start)
             ]
         ]

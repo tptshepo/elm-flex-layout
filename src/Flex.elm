@@ -2,6 +2,7 @@ module Flex exposing
     ( fxLayout
     , Direction, row, column
     , Alignment, start, end, center, stretch, spaceBetween, spaceAround, spaceEvenly
+    , fxColumn, fxRow
     )
 
 {-| Flex provides a layout API for using Flexbox CSS.
@@ -110,6 +111,42 @@ spaceAround =
 spaceEvenly : Alignment
 spaceEvenly =
     SpaceEvenly
+
+
+{-| Shorthad for `fxLayout Flex.row`.
+
+    Example
+
+    div ([] ++ fxRow Flex.spaceAround Flex.center)
+        [ div [] [ text "1" ]
+        , div [] [ text "2" ]
+        , div [] [ text "3" ]
+        , div [] [ text "4" ]
+        , div [] [ text "5" ]
+        ]
+
+-}
+fxRow : Alignment -> Alignment -> List (Attribute msg)
+fxRow =
+    fxLayout row
+
+
+{-| Shorthad for `fxLayout Flex.column`.
+
+    Example
+
+    div ([] ++ fxColumn Flex.spaceAround Flex.center)
+        [ div [] [ text "1" ]
+        , div [] [ text "2" ]
+        , div [] [ text "3" ]
+        , div [] [ text "4" ]
+        , div [] [ text "5" ]
+        ]
+
+-}
+fxColumn : Alignment -> Alignment -> List (Attribute msg)
+fxColumn =
+    fxLayout column
 
 
 {-| Returns an array of `Html.Attributes.style` required to align the child items.

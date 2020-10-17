@@ -124,8 +124,8 @@ viewBoxContainer model =
 
 viewPageTitleContainer : Html Msg
 viewPageTitleContainer =
-    div ([ class "page-title" ] ++ fxLayout Flex.column Flex.stretch Flex.start)
-        [ div ([ style "height" "50px" ] ++ fxLayout Flex.row Flex.start Flex.center)
+    div ([ class "page-title" ] ++ fxColumn Flex.stretch Flex.start)
+        [ div ([ style "height" "50px" ] ++ fxRow Flex.start Flex.center)
             [ h5 [ style "margin-right" "20px" ] [ text "Elm Flex Layout:" ]
             , span [] [ text "Version: @latest" ]
             ]
@@ -141,7 +141,7 @@ viewTogglesContainer : LayoutModel -> Html Msg
 viewTogglesContainer model =
     div
         ([ class "toggle-container" ]
-            ++ fxLayout Flex.row Flex.spaceAround Flex.start
+            ++ fxRow Flex.spaceAround Flex.start
         )
         [ viewToggleDirectionContainer model
         , viewToggleHorizontalContainer model
@@ -153,7 +153,7 @@ viewToggleDirectionContainer : LayoutModel -> Html Msg
 viewToggleDirectionContainer model =
     div
         ([ class "toggle-item-container" ]
-            ++ fxLayout Flex.column Flex.stretch Flex.start
+            ++ fxColumn Flex.stretch Flex.start
         )
         [ span [] [ text "Layout Direction" ]
         , br [] []
@@ -176,7 +176,7 @@ viewToggleHorizontalContainer model =
     in
     div
         ([ class "toggle-item-container" ]
-            ++ fxLayout Flex.column Flex.stretch Flex.start
+            ++ fxColumn Flex.stretch Flex.start
         )
         [ span [] [ text title ]
         , br [] []
@@ -203,7 +203,7 @@ viewToggleVerticalContainer model =
     in
     div
         ([ class "toggle-item-container" ]
-            ++ fxLayout Flex.column Flex.stretch Flex.start
+            ++ fxColumn Flex.stretch Flex.start
         )
         [ span [] [ text title ]
         , br [] []
@@ -240,7 +240,7 @@ view model =
         , div [ class "card" ]
             [ div [ class "card-body" ]
                 [ h5 [ class "card-title" ] [ text "API: fxLayout" ]
-                , div ([] ++ fxLayout Flex.column Flex.stretch Flex.start)
+                , div ([] ++ fxColumn Flex.stretch Flex.start)
                     [ viewBoxContainer model
                     , viewTogglesContainer model
                     ]
