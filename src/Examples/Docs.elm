@@ -5,6 +5,7 @@ import Flex exposing (..)
 import Html exposing (..)
 import Html.Attributes as Attr exposing (..)
 import Html.Events exposing (..)
+import Markdown
 
 
 
@@ -137,6 +138,50 @@ viewPageTitleContainer =
         ]
 
 
+viewCodeContainer : LayoutModel -> Html Msg
+viewCodeContainer model =
+    let
+        direction =
+            if model.direction == Flex.row then
+                "Flex.row"
+
+            else
+                "Flex.column"
+
+        hAlign =
+            Flex.alignmentToString model.horizontalAlignment
+
+        vAlign =
+            Flex.alignmentToString model.verticalAlignment
+
+        code =
+            if model.direction == Flex.row then
+                "fxLayout " ++ direction ++ " Flex." ++ hAlign ++ " Flex." ++ vAlign
+
+            else
+                "fxLayout " ++ direction ++ " Flex." ++ vAlign ++ " Flex." ++ hAlign
+
+        body =
+            """
+##### Code Preview
+```elm
+view = 
+  div ([] ++ """ ++ code ++ """)
+          [ div [] [ text "1" ]
+          , div [] [ text "2" ]
+          , div [] [ text "3" ]
+          , div [] [ text "4" ]
+          , div [] [ text "5" ]
+          ]
+```
+          """
+    in
+    div
+        [ class "code-container" ]
+        [ Markdown.toHtml [ class "content" ] body
+        ]
+
+
 viewTogglesContainer : LayoutModel -> Html Msg
 viewTogglesContainer model =
     div
@@ -236,12 +281,14 @@ view model =
     div [ class "container" ]
         [ br [] []
         , viewPageTitleContainer
-        , br [] []
         , div [ class "card" ]
             [ div [ class "card-body" ]
-                [ h5 [ class "card-title" ] [ text "API: fxLayout" ]
+                [ h5 [ class "card-title" ] [ text "Visual Preview" ]
                 , div ([] ++ fxColumn Flex.stretch Flex.start)
                     [ viewBoxContainer model
+                    , viewCodeContainer model
+                    , br [] []
+                    , h5 [] [ text "Layout Toggles" ]
                     , viewTogglesContainer model
                     ]
                 ]

@@ -1,8 +1,7 @@
 module Flex exposing
-    ( fxLayout
+    ( fxLayout, fxRow, fxColumn, alignmentToString
     , Direction, row, column
     , Alignment, start, end, center, stretch, spaceBetween, spaceAround, spaceEvenly
-    , fxColumn, fxRow
     )
 
 {-| Flex provides a layout API for using Flexbox CSS.
@@ -13,7 +12,7 @@ Demo
 
 # API
 
-@docs fxLayout
+@docs fxLayout, fxRow, fxColumn, alignmentToString
 
 
 # Direction
@@ -62,6 +61,33 @@ type Alignment
     | SpaceAround
     | SpaceEvenly
     | Stretch
+
+
+{-| Return a string version of the `Alignment` type
+-}
+alignmentToString : Alignment -> String
+alignmentToString alignment =
+    case alignment of
+        Start ->
+            "start"
+
+        Center ->
+            "center"
+
+        End ->
+            "end"
+
+        SpaceBetween ->
+            "spaceBetween"
+
+        SpaceAround ->
+            "spaceAround"
+
+        SpaceEvenly ->
+            "spaceEvenly"
+
+        Stretch ->
+            "stretch"
 
 
 {-| `flex-start` items are placed at the start of the cross axis. The difference between these is subtle, and is about respecting the flex-direction rules.
